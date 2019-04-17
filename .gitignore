@@ -1,0 +1,5 @@
+*.txt
+*.o
+*.swp
+bin/*.exe
+build/*.o
