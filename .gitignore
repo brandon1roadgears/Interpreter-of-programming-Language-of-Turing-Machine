@@ -3,4 +3,4 @@
 *.swp
 bin/*.exe
 build/*.o
-src/*.o
+src/turing.o
