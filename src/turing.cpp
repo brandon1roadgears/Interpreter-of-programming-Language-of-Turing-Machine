@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 int N = 10000;
+int point = 0;
 string main_row;
 struct action {
     string state;
@@ -48,20 +49,25 @@ void printstring()
 
 void MOVE(action* rules, int j)
 {
-  int point = 0;
-  if (rules[j].move == "l")
-    point--;
-  if (rules[j].move == "r")
-    point++;
-  if(rules[j].move == "n")
-    point = point;
-  //main_row[point] = "1";
+  main_row[point] = '1';
   printstring();
+  if (rules[j].move == "l")
+  {
+    point--;
+  }
+  if (rules[j].move == "r")
+  {
+    point++;
+  }
+  if(rules[j].move == "n")
+  {
+    point = point;
+  }
+  main_row[point] = '1';
 }
 void RUN(action *rules, int end)
 {
-  cout << main_row[0];
-  for (int i = 0; i < end; i++){
+  for (int i = 0; i <= end; i++){
     MOVE(rules, i);
   }
 }
