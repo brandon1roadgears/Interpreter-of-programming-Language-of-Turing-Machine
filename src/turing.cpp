@@ -44,37 +44,34 @@ int check_ERROR(action* rules, int j)
 
 void printstring()
 {
-  cout << main_row << endl << endl;
+    cout << main_row << endl << endl;
 }
 
 void MOVE(action* rules, int j)
 {
-  main_row[point] = '1';
-  printstring();
-  if (rules[j].move == "l")
-  {
-    point--;
-  }
-  if (rules[j].move == "r")
-  {
-    point++;
-  }
-  if(rules[j].move == "n")
-  {
-    point = point;
-  }
-  main_row[point] = '1';
+    main_row[point] = '1';
+    printstring();
+    if (rules[j].move == "l") {
+        point--;
+    }
+    if (rules[j].move == "r") {
+        point++;
+    }
+    if (rules[j].move == "n") {
+        point = point;
+    }
+    main_row[point] = '1';
 }
-void RUN(action *rules, int end)
+void RUN(action* rules, int end)
 {
-  for (int i = 0; i <= end; i++){
-    MOVE(rules, i);
-  }
+    for (int i = 0; i <= end; i++) {
+        MOVE(rules, i);
+    }
 }
 void input_main_row()
 {
-  cout << "Введите основную строку!!!" << endl;
-  cin >> main_row;
+    cout << "Введите основную строку!!!" << endl;
+    cin >> main_row;
 }
 void input_rules(action* rules)
 {
@@ -104,3 +101,4 @@ int main()
     delete[] rules;
     return 0;
 }
+shlyap
