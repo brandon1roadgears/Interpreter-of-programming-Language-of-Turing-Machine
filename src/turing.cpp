@@ -11,7 +11,7 @@ struct action {
 };
 int check_ERROR(action* rules, int j)
 {
-    if (rules[0].state.length() != "00") {
+    if (rules[0].state != "00") {
         cout << "Error in line = " << 1 << " in state" << endl;
         cout << "Имя первого состояния должно быть нулевым!!!" << endl;
         return 0;
@@ -62,6 +62,25 @@ void input_main_row()
     cout << "Введите строку для обработки!" << endl;
     cin >> main_row;
 }
+void printstring()
+{
+  cout << main_row << endl;
+}
+
+void get_exp_symbol(action* rules, int point)
+{
+  char exp[2];
+  strcpy(exp, rules[point].expected_symbol);
+
+}
+
+void RUN(action *rules)
+{
+  int point = 0;
+  for (int i = 0; i < N; i++){
+    get_exp_symbol(rules, i);
+  }
+}
 int main()
 {
     setlocale(LC_ALL, "russian");
@@ -69,7 +88,7 @@ int main()
     rules = new action[N];
     input_main_row();
     input_rules(rules);
-    get_state(rules);
+    RUN(rules);
     delete[] rules;
     return 0;
 }
