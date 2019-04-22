@@ -1,6 +1,11 @@
 #include "head.h"
 int main()
 {
-  
-  return 0;
+    setlocale(LC_ALL, "russian");
+    action* rules;
+    rules = new action[N];
+    input_main_row();
+    input_rules(rules);
+    delete[] rules;
+    return 0;
 }
