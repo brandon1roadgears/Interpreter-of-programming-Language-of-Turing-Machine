@@ -3,4 +3,5 @@
 *.swp
 bin/*.exe
 build/*.o
-src/turing
+src/turing.cpp
+src/turing.*
