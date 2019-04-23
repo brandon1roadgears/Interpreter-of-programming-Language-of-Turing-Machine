@@ -9,3 +9,4 @@ int main()
     delete[] rules;
     return 0;
 }
+
