@@ -5,3 +5,4 @@ void RUN(action* rules, int end)
         MOVE(rules, i);
     }
 }
+
