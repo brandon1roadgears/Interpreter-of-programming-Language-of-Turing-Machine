@@ -1,7 +1,7 @@
 #include "head.h"
 void input_rules(action* rules)
 {
-  cout << "Введите правила!" << endl;
+    cout << "Введите правила!" << endl;
     int fl, i;
     for (i = 0; i < N; i++) {
         cin >> rules[i].state;
@@ -17,3 +17,4 @@ void input_rules(action* rules)
     }
     RUN(rules, i);
 }
+
