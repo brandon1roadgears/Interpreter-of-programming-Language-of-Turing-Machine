@@ -30,3 +30,4 @@ int check_ERROR(action* rules, int j)
     }
     return 1;
 }
+
