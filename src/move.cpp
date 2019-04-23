@@ -14,3 +14,4 @@ void MOVE(action* rules, int j)
     }
     main_row[point] = '1';
 }
+
