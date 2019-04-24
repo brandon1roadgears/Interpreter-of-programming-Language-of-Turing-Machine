@@ -1,4 +1,6 @@
 #include "head.h"
+extern void input_main_row();
+extern void input_rules(action* rules);
 int main()
 {
     setlocale(LC_ALL, "russian");
