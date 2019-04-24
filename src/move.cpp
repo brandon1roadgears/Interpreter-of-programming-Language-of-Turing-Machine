@@ -1,4 +1,5 @@
 #include "head.h"
+extern void printstring();
 void MOVE(action* rules, int j)
 {
     main_row[point] = '1';
