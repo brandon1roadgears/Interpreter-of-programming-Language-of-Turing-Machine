@@ -19,4 +19,3 @@ void input_rules(action* rules)
     }
     RUN(rules, i);
 }
-
