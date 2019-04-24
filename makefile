@@ -6,11 +6,12 @@ OBJ = g++ $(CFAGS) -c $< -o $@
 all: goal1 goal2 bin/turing.exe
 	
 goal1:
-	mkdir -p bin
-goal2: 
 	mkdir -p build
 
-bin/turing.exe: build/main.o build/checkerror.cpp build/input_main_row.o build/input_rules.o build/move.o build/printstring.o build/RUN.o
+goal2: 
+	mkdir -p bin
+
+bin/turing.exe: build/main.o build/checkerror.o build/input_main_row.o build/input_rules.o build/move.o build/printstring.o build/RUN.o
 	g++ $(CFLAGS) $^ -o $@
 
 build/main.o: src/main.cpp src/head.h
