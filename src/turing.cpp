@@ -101,4 +101,3 @@ int main()
     delete[] rules;
     return 0;
 }
-shlyap
