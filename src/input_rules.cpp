@@ -1,4 +1,6 @@
 #include "head.h"
+extern int check_ERROR(action* rules, int j);
+extern void RUN(action* rules, int end);
 void input_rules(action* rules)
 {
   cout << "Введите правила!" << endl;
