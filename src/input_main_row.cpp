@@ -1,6 +1,7 @@
 #include "head.h"
-void input_main_row()
+string input_main_row(string main_row)
 {
-    cout << "Введите основную строку!!!" << endl;
+    cout << "Input main Row" << endl;
     cin >> main_row;
+    return main_row;
 }

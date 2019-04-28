@@ -1,16 +1,11 @@
 #include "head.h"
-void MOVE(action* rules, int j)
+int move(int point, vector<action>& rules, int i)
 {
-    main_row[point] = '1';
-    printstring();
-    if (rules[j].move == "l") {
-        point--;
-    }
-    if (rules[j].move == "r") {
+    if (rules[i].move == "r")
         point++;
-    }
-    if (rules[j].move == "n") {
+    if (rules[i].move == "l")
+        point--;
+    if (rules[i].move == "n")
         point = point;
-    }
-    main_row[point] = '1';
+    return point;
 }
