@@ -13,7 +13,7 @@ TEST_CASE("DO_s-test", "[DO_S-test]"){
 	REQUIRE(do_s("2929bcwykrbbr", 2,"2","s") == "29s9bcwykrbbr");
 	REQUIRE(do_s("(!*!!!!!**!)", 6,"!","?") == "(!*!!!?!**!)");
 	REQUIRE(do_s("[0][1][2][3][4][5][6][7]", 13,"4","0") == "[0][1][2][3][0][5][6][7]");
-	REQUIRE(do_s("qazxswedcvdrtgqwe", 16,"e","9") == "qazxswedcvdrtgq9");
+	REQUIRE(do_s("qazxswedcvdrtgqwe", 16,"e","9") == "qazxswedcvdrtgqw9");
 	REQUIRE(do_s("______5________", 6,"_","w") == "_______________");
 	REQUIRE(do_s("113213123123123123123123113", 23,"3",".") == "11321312312312312312312.113");
 	REQUIRE(do_s("3+2", 1,"+","-") == "3-2");
