@@ -1,17 +1,26 @@
 CFLAGS = -Wall -Werror
-OBJ = g++ $(CFAGS) -c $< -o $@
+COMPILER = g++ -std=c++11
+OBJ = $(COMPILER) $(CFLAGS) -c $< -o $@
+TOBJT = $(COMPILER) $(CFLAGS) -I for_test_special/catch2 -c $< -o $@
 
 .PHONY: clean
  
-all: goal1 goal2 bin/turing.exe
+all: goal1 goal2 test3 test4 bin/turing.exe
 	
 goal1:
 	mkdir -p bin
+
 goal2: 
 	mkdir -p build
 
-bin/turing.exe: build/main.o build/check_error.o build/input_main_row.o build/input_rules.o build/move.o build/print_string.o build/run.o build/check_rules.o
-	g++ $(CFLAGS) $^ -o $@
+test3:
+	mkdir -p build/src
+
+test4:
+	mkdir -p build/test
+
+bin/turing.exe: build/main.o build/check_error.o build/input_main_row.o build/input_rules.o build/move.o build/print_string.o build/run.o build/do_s.o
+	$(COMPILER) $(CFLAGS) $^ -o $@
 
 build/main.o: src/main.cpp src/head.h
 	$(OBJ)
@@ -34,11 +43,10 @@ build/print_string.o: src/print_string.cpp src/head.h
 build/run.o: src/run.cpp src/head.h
 	$(OBJ)
 
-build/check_rules.o: src/check_rules.cpp src/head.h
+build/do_s.o: src/do_s.cpp src/head.h
 	$(OBJ)
+
 clean:
-	rm build/*.o
-	rm bin/*.exe
 	rm -R build
 	rm -R bin
 
