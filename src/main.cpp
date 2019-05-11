@@ -1,6 +1,6 @@
 #include "head.h"
 extern string input_main_row(string main_row);
-extern void input_rules(vector<action>& rules, string main_row);
+extern void input_rules(vector <action> &rules, string main_row, int point);
 int main()
 {
 	int point = 0;
