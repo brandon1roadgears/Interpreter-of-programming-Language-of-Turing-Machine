@@ -13,7 +13,7 @@ TEST_CASE("Print_string-test" ,"[TEST]"){
   REQUIRE(print_string("(123123)-(2)+(32323)=") == "(123123)-(2)+(32323)=");
   REQUIRE(print_string("!@#$%^*") == "!@#$%^*");
   REQUIRE(print_string("(adsadadad)(asdadasdasda)") == "(adsadadad)(asdadasdasda)" );
-  REQUIRE(print_string("hello world!") == "hello world !");
+  REQUIRE(print_string("hello world!") == "hello world!");
   REQUIRE(print_string("|abababbababa|") == "|abababbababa|");
   cout << endl <<"TEST PRINTSTRING.cpp is done" << endl;
 }
