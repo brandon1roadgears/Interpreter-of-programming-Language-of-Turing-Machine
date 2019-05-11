@@ -11,5 +11,3 @@ void RUN(vector<action>& rules, int end, string main_row, int point)
         point = move(point, rules, i);
     }
 }
-
-

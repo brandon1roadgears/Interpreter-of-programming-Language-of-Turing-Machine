@@ -10,4 +10,3 @@ int main()
     input_rules(rules, main_row, point);
     return 0;
 }
-

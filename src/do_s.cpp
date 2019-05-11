@@ -11,4 +11,3 @@ string do_s(vector<action>& rules, string main_row, int i, int point)
     }
     return main_row;
 }
-
