@@ -1,4 +1,4 @@
-#include "Turing-test-head.h"
+#include "turing-test-head.h"
 string print_string(string row)
 {
   return row;
