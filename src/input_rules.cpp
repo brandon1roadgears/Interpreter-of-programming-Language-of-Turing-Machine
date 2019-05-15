@@ -1,6 +1,6 @@
 #include "head.h"
 extern int check_error(vector<action>& rules, int i);
-extern void RUN(vector<action>& rules, int end, string main_row, int point);
+extern void RUN(vector<action>& rules, int end, string main_row);
 void input_rules(vector<action>& rules, string main_row)
 {
     int fl;
