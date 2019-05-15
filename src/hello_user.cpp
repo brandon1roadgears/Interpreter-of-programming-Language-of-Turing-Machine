@@ -1,3 +1,4 @@
+#include "head.h"
 void hello_user()
 {
     setlocale(LC_ALL, "Russian");
@@ -33,4 +34,3 @@ void hello_user()
          << "\t\tВывод:  wq01" << endl
          << endl;
 }
-
