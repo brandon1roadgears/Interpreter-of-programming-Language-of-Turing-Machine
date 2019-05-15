@@ -6,17 +6,15 @@ void RUN(vector<action>& rules, int end, string main_row)
 {
     int i = 0, point = 0;
     string current_state = rules[point].state;
-    while (current_state != "##")
-    {
-	if (current_state == rules[i].state && main_row[point] == rules[i].exp_symbol[0])
-	{
-        	main_row = do_s(rules, main_row, i, point);
-        	print_string(main_row);
-        	point = move(point, rules, i);
-		i = 0;
-	}else
-	    {
-		i++;
-	    }
+    while (current_state != "##") {
+        if (current_state == rules[i].state
+            && main_row[point] == rules[i].exp_symbol[0]) {
+            main_row = do_s(rules, main_row, i, point);
+            print_string(main_row);
+            point = move(point, rules, i);
+            i = 0;
+        } else {
+            i++;
+        }
     }
 }
