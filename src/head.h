@@ -7,4 +7,4 @@ struct action {
     string new_symb;
     string move;
     string next_state;
-};
+}element;
