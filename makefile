@@ -19,7 +19,7 @@ test3:
 test4:
 	mkdir -p build/test
 
-bin/turing.exe: build/src/main.o build/src/check_error.o build/src/input_main_row.o build/src/input_rules.o build/src/move.o build/src/print_string.o build/src/run.o build/src/do_s.o
+bin/turing.exe: build/src/main.o build/src/check_error.o build/src/input_main_row.o build/src/input_rules.o build/src/move.o build/src/print_string.o build/src/run.o build/src/do_s.o build/src/hello_user.o
 	$(COMPILER) $(CFLAGS) $^ -o $@
 
 build/src/main.o: src/main.cpp src/head.h
@@ -44,6 +44,9 @@ build/src/run.o: src/run.cpp src/head.h
 	$(OBJ)
 
 build/src/do_s.o: src/do_s.cpp src/head.h
+	$(OBJ)
+
+build/src/hello_user.o: src/hello_user.cpp src/head.h
 	$(OBJ)
 
 bin/turing-test: build/test/test.o build/test/check_error-test.o build/test/do_s-test.o build/test/move-test.o build/test/print_string-test.o
