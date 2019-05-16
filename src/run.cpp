@@ -2,7 +2,7 @@
 extern void print_string(string row);
 extern int move(int point, vector<action>& rules, int i);
 extern string do_s(vector<action>& rules, string main_row, int i, int point);
-void RUN(vector<action>& rules, int end, string main_row)
+void RUN(vector<action>& rules, string main_row)
 {
     int i = 0, point = 0;
     string current_state = rules[point].state;
@@ -12,6 +12,7 @@ void RUN(vector<action>& rules, int end, string main_row)
             main_row = do_s(rules, main_row, i, point);
             print_string(main_row);
             point = move(point, rules, i);
+            current_state = rules[i].next_state;
             i = 0;
         } else {
             i++;
