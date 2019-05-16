@@ -5,4 +5,4 @@ bin/*.exe
 build/*.o
 bin
 build
-comp.cpp
+comp
