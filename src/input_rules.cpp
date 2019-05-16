@@ -5,8 +5,7 @@ void input_rules(vector<action>& rules, string main_row)
 {
     action element;
     int fl, i;
-    for (i = 0; 1; i++)
-    {
+    for (i = 0; 1; i++) {
         rules.push_back(element);
         cin >> rules[i].state;
         cin >> rules[i].exp_symbol;
@@ -14,7 +13,7 @@ void input_rules(vector<action>& rules, string main_row)
         cin >> rules[i].move;
         cin >> rules[i].next_state;
         fl = check_error(rules, i);
-        if (!fl){
+        if (!fl) {
             cout << "ERROR";
             break;
         }
