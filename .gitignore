@@ -7,3 +7,5 @@ bin
 build
 comp
 comp.cpp
+rules.txt
+string.txt
