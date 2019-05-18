@@ -5,7 +5,7 @@ void input_rules(vector <action> &rules, string main_row)
 {
   action element;
 	int i = 0,fl;
-	ifstream fle("text.txt");
+	ifstream fle("rules.txt");
 	while (!fle.eof())
 	{
 		rules.push_back(element);
