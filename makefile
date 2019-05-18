@@ -70,6 +70,8 @@ build/test/move-test.o: test/move-test.cpp test/turing-test-head.h
 build/test/print_string-test.o: test/print_string-test.cpp test/turing-test-head.h
 	$(TOBJT)
 
+run-app: bin/turing.exe
+	./bin/turing.exe
 clean:
 	rm -R build/src/*.o
 	rm -R bin/turing.exe
