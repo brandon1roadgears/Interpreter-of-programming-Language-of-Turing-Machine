@@ -2,7 +2,8 @@
 
 ![v2.0](https://wp-assets.highcharts.com/blog/wp-content/uploads/2010/07/06155409/Version-2.0-released.jpg)
 VERSION 2.0
-	In this version you can:
-	* Use two files "rules.txt" and "string.txt" for comfortable work with app
-	* Use cycle and going from state to state 
-	* Also you can see pointer position
+	
+In this version you can:
+* Use two files "rules.txt" and "string.txt" for comfortable work with app
+* Use cycle and going from state to state 
+* Also you can see pointer position
