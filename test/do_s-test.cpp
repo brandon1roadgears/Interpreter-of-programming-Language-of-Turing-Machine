@@ -57,5 +57,5 @@ TEST_CASE("DO_s-test", "[DO_S-test]"){
 	REQUIRE(do_s(rules, main_row, 0, 0) == "(32+65)");
 	cout << "test [do_s 10] successful" << endl;
 
-	cout << "TEST do_s-test.cpp is done";
+	cout << "TEST do_s-test.cpp is done" << endl;
 }
