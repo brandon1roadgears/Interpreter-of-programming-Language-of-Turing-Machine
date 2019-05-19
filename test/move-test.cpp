@@ -1,11 +1,11 @@
 #include "turing-test-head.h"
 int point (int point, vector<action> &rules, int i)
 {
-  if (move == "r")
+  if (rules[i].move == "r")
 		point++;
-	if (move == "l")
+	if (rules[i].move == "l")
 		point--;
-	if (move == "n")
+	if (rules[i].move == "n")
 		point = point;
 	return point;
 }
