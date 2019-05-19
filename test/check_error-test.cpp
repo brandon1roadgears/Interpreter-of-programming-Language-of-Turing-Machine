@@ -2,11 +2,7 @@
 bool check_error(vector <action> &rules)
 {
 	if (rules[0].state != "00")
-	{
-		cout << "Error in line = 1" << "state" << endl;
-		cout << "Name of first state must be 00 !!!" << endl;
 		return 0;
-	}
 	for (long unsigned int i = 0; i < rules.size(); i++)
 	{
 		if (rules[i].state.length() > 10)

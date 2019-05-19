@@ -1,23 +1,61 @@
 #include "turing-test-head.h"
-string do_s(string main_row, int point, string exp_symb, string new_symb)
+string do_s(vector <action> &rules, string main_row, int i, int point)
 {
-	if (main_row[point] == exp_symb[0])
-	{
-		main_row[point] = new_symb[0];
-	}
+	main_row[point] = rules[i].new_symb[0];
 	return main_row;
 }
 TEST_CASE("DO_s-test", "[DO_S-test]"){
-	REQUIRE(do_s("101001010001", 2,"1","w") == "10w001010001");
-	REQUIRE(do_s("qeqrrwtqyqyywt", 5,"w","3") == "qeqrr3tqyqyywt");
-	REQUIRE(do_s("2929bcwykrbbr", 2,"2","s") == "29s9bcwykrbbr");
-	REQUIRE(do_s("(!*!!!!!**!)", 6,"!","?") == "(!*!!!?!**!)");
-	REQUIRE(do_s("[0][1][2][3][4][5][6][7]", 13,"4","0") == "[0][1][2][3][0][5][6][7]");
-	REQUIRE(do_s("qazxswedcvdrtgqwe", 16,"e","9") == "qazxswedcvdrtgqw9");
-	REQUIRE(do_s("______5________", 6,"5","_") == "_______________");
-	REQUIRE(do_s("113213123123123123123123113", 23,"3",".") == "11321312312312312312312.113");
-	REQUIRE(do_s("3+2", 1,"+","-") == "3-2");
-	REQUIRE(do_s("(456-325_", 8,"_",")") == "(456-325)");
-	REQUIRE(do_s("(_)(1)(2)(3)(4)", 1,"_","0") == "(0)(1)(2)(3)(4)");
+	std::vecor <action> rules;
+	rules.resize(1);
+	rules[0].state = "00"; rules[0].exp_symbol = "1"; rules[0].new_symb = "0"; rules[0].move = "r"; rules[0].next_state = "halt";
+	std::string main_row = "1100111001";
+	REQUIRE(do_s(rules, main_row, 0, 5) == "1100101001");
+	cout << "test [do_s 1] successful" << endl;
+
+	rules[0].state = "00"; rules[0].exp_symbol = "5"; rules[0].new_symb = "_"; rules[0].move = "r"; rules[0].next_state = "halt";
+	std::string main_row = "________5________";
+	REQUIRE(do_s(rules, main_row, 0, 8) == "_________________");
+	cout << "test [do_s 2] successful" << endl;
+
+	rules[0].state = "00"; rules[0].exp_symbol = "0"; rules[0].new_symb = "!"; rules[0].move = "r"; rules[0].next_state = "halt";
+	std::string main_row = "!!!!!!!!!!!!!!!!!!!!!0";
+	REQUIRE(do_s(rules, main_row, 0, 21) == "!!!!!!!!!!!!!!!!!!!!!!");
+	cout << "test [do_s 3] successful" << endl;
+
+	rules[0].state = "00"; rules[0].exp_symbol = "F"; rules[0].new_symb = "f"; rules[0].move = "r"; rules[0].next_state = "halt";
+	std::string main_row = "qazxswedcvFrtgbnhyujm";
+	REQUIRE(do_s(rules, main_row, 0, 10) == "qazxswedcvfrtgbnhyujm");
+	cout << "test [do_s 4] successful" << endl;
+
+	rules[0].state = "00"; rules[0].exp_symbol = "."; rules[0].new_symb = ","; rules[0].move = "r"; rules[0].next_state = "halt";
+	std::string main_row = "1.12312312312";
+	REQUIRE(do_s(rules, main_row, 0, 1) == "1,12312312312");
+	cout << "test [do_s 5] successful" << endl;
+
+	rules[0].state = "00"; rules[0].exp_symbol = "_"; rules[0].new_symb = "r"; rules[0].move = "r"; rules[0].next_state = "halt";
+	std::string main_row = "Hello_use_";
+	REQUIRE(do_s(rules, main_row, 0, 9) == "Hello_user");
+	cout << "test [do_s 6] successful" << endl;
+
+	rules[0].state = "00"; rules[0].exp_symbol = "s"; rules[0].new_symb = "A"; rules[0].move = "r"; rules[0].next_state = "halt";
+	std::string main_row = "AAAAAAAAAAAAAAAsAAAAAAAAAAAAA";
+	REQUIRE(do_s(rules, main_row, 0, 15) == "AAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+	cout << "test [do_s 7] successful" << endl;
+
+	rules[0].state = "00"; rules[0].exp_symbol = "9"; rules[0].new_symb = "8"; rules[0].move = "r"; rules[0].next_state = "halt";
+	std::string main_row = "123123124314135438570189";
+	REQUIRE(do_s(rules, main_row, 0, 23) == "123123124314135438570188");
+	cout << "test [do_s 8] successful" << endl;
+
+	rules[0].state = "00"; rules[0].exp_symbol = "_"; rules[0].new_symb = "-"; rules[0].move = "r"; rules[0].next_state = "halt";
+	std::string main_row = "328_823";
+	REQUIRE(do_s(rules, main_row, 0, 3) == "328-823");
+	cout << "test [do_s 9] successful" << endl;
+
+	rules[0].state = "00"; rules[0].exp_symbol = "_"; rules[0].new_symb = "("; rules[0].move = "r"; rules[0].next_state = "halt";
+	std::string main_row = "_32+65)";
+	REQUIRE(do_s(rules, main_row, 0, 0) == "(32+65)");
+	cout << "test [do_s 10] successful" << endl;
+
 	cout << "TEST do_s-test.cpp is done";
 }
