@@ -74,7 +74,7 @@ TEST_CASE("test MOVE", "[TEST]"){
   REQUIRE(point(1001, rules, 0) == 1002);
   cout << "test [move 20] successful" << endl;
   rules[0].state = "00"; rules[0].exp_symbol = "1"; rules[0].new_symb = "0"; rules[0].move = "l"; rules[0].next_state = "halt";
-  REQUIRE(point(10000, rules, 0) == 999);
+  REQUIRE(point(10000, rules, 0) == 9999);
   cout << "test [move 21] successful" << endl;
   rules[0].state = "00"; rules[0].exp_symbol = "1"; rules[0].new_symb = "0"; rules[0].move = "n"; rules[0].next_state = "halt";
   REQUIRE(point(214, rules, 0) == 214);
