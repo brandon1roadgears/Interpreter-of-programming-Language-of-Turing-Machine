@@ -10,30 +10,19 @@ bool check_error(vector <action> &rules)
 	for (long unsigned int i = 0; i < rules.size(); i++)
 	{
 		if (rules[i].state.length() > 10)
-		{
-			cout << "Error in line = " << i+1 <<" in state!!! " << endl;
 			return 0;
-		}
+
 		if (rules[i].exp_symbol.length() > 1)
-		{
-			cout << "Error in line = " << i+1 <<" in exp_symbol!!! " << endl;
 			return 0;
-		}
+
 		if (rules[i].new_symb.length() > 1)
-		{
-			cout << "Error in line = " << i+1 <<" in new_symb!!! " << endl;
 			return 0;
-		}
+
 		if (rules[i].move.length() > 1)
-		{
-			cout << "Error in line = " << i+1 <<" in move!!! " << endl;
 			return 0;
-		}
+
 		if (rules[i].next_state.length() > 10)
-		{
-			cout << "Error in line = " << i+1 <<" in next_state!!! " << endl;
 			return 0;
-		}
 	}
 	return 1;
 }
