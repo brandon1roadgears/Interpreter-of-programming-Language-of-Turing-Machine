@@ -75,5 +75,6 @@ run-app: bin/turing.exe
 clean:
 	rm -R build/src/*.o
 	rm -R bin/turing.exe
+	rm -R bin/turing-test
 	rm -R build
 	rm -R bin
