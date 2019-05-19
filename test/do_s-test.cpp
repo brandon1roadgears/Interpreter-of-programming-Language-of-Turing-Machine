@@ -5,7 +5,7 @@ string do_s(vector <action> &rules, string main_row, int i, int point)
 	return main_row;
 }
 TEST_CASE("DO_s-test", "[DO_S-test]"){
-	std::vecor <action> rules;
+	std::vector <action> rules;
 	rules.resize(1);
 	rules[0].state = "00"; rules[0].exp_symbol = "1"; rules[0].new_symb = "0"; rules[0].move = "r"; rules[0].next_state = "halt";
 	std::string main_row = "1100111001";
