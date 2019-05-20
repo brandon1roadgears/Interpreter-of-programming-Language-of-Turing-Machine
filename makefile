@@ -52,7 +52,7 @@ build/src/hello_user.o: src/hello_user.cpp src/head.h
 build/src/pointer.o: src/pointer.cpp src/head.h
 	$(OBJ)
 
-bin/turing-test: build/test/test.o build/test/check_error-test.o build/test/do_s-test.o build/test/move-test.o build/test/print_string-test.o build/test/input_main_row-test.o build/test/pointer-test.o
+bin/turing-test: build/test/test.o build/test/check_error-test.o build/test/do_s-test.o build/test/move-test.o build/test/print_string-test.o build/test/input_main_row-test.o build/test/pointer-test.o build/test/run-test.o
 	$(COMPILER) $(CFLAGS) $^ -o $@
 
 build/test/test.o: test/test.cpp test/turing-test-head.h
@@ -74,6 +74,9 @@ build/test/input_main_row-test.o: test/input_main_row-test.cpp test/turing-test-
 	$(TOBJT)
 
 build/test/pointer-test.o: test/pointer-test.cpp test/turing-test-head.h
+	$(TOBJT)
+
+build/test/run-test.o: test/run-test.cpp test/turing-test-head.h
 	$(TOBJT)
 
 run-app: bin/turing.exe
