@@ -76,9 +76,6 @@ build/test/input_main_row-test.o: test/input_main_row-test.cpp test/turing-test-
 build/test/pointer-test.o: test/pointer-test.cpp test/turing-test-head.h
 	$(TOBJT)
 
-build/test/run-test.o: test/run-test.cpp test/turing-test-head.h
-	$(TOBJT)
-
 run-app: bin/turing.exe
 	./bin/turing.exe
 clean:
