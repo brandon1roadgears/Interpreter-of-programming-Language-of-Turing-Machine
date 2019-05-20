@@ -2,6 +2,7 @@
 *.o
 *.swp
 bin/*.exe
+bin/turing-test
 build/*.o
 bin
 build
