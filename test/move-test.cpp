@@ -168,6 +168,6 @@ TEST_CASE("test MOVE", "[TEST]")
     rules[0].next_state = "halt";
     REQUIRE(point(214, rules, 0) == 214);
     cout << "test [move 22] successful" << endl;
-    cout << endl << "TEST move is done" << endl;
+    cout << "TEST move is done" << endl;
 }
 
