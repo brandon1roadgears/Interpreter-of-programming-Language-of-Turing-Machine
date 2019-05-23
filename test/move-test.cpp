@@ -170,4 +170,3 @@ TEST_CASE("test MOVE", "[TEST]")
     cout << "test [move 22] successful" << endl;
     cout << "TEST move is done" << endl;
 }
-

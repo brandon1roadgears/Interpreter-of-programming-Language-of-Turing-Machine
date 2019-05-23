@@ -222,4 +222,3 @@ TEST_CASE("Check error test:", "[Checkerrortest]")
     cout << "test [check_error 10] successful" << endl;
     cout << "TEST check_rules is done" << endl;
 }
-

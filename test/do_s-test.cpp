@@ -100,4 +100,3 @@ TEST_CASE("DO_s-test", "[DO_S-test]")
 
     cout << "TEST do_s-test.cpp is done" << endl;
 }
-

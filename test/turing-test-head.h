@@ -9,4 +9,3 @@ struct action {
     std::string move;
     std::string next_state;
 };
-

@@ -52,4 +52,3 @@ TEST_CASE("input_main_row", "[TEST]")
     cout << "test [input_main_row 6] succesful" << endl;
     cout << "TEST input_mainrow is done" << endl;
 }
-

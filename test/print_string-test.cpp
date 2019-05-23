@@ -29,5 +29,3 @@ TEST_CASE("Print_string-test", "[TEST]")
     cout << "test [print_string 10] successful" << endl;
     cout << "TEST PRINTSTRING.cpp is done" << endl;
 }
-
-
