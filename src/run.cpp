@@ -15,6 +15,8 @@ void RUN(vector<action>& rules, string main_row)
             main_row = do_s(rules, main_row, i, point);
             print_string(main_row);
             pointer(point, main_row);
+            std::this_thread::sleep_for(std::chrono::milliseconds(20));
+            system("clear");
             point = move(point, rules, i);
             current_state = rules[i].next_state;
             i = 0;
@@ -22,4 +24,6 @@ void RUN(vector<action>& rules, string main_row)
             i++;
         }
     }
+    cout << main_row << endl;
+    pointer(point, main_row);
 }
