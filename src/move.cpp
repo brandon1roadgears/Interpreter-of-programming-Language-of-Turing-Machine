@@ -2,9 +2,9 @@
 int move(int point, vector<action>& rules, int i)
 {
     if (rules[i].move == "r")
-        point++;
+        ++point;
     if (rules[i].move == "l")
-        point--;
+        --point;
     if (rules[i].move == "n")
         point = point;
     return point;
