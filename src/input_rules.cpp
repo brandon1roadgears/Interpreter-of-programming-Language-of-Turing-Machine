@@ -4,8 +4,13 @@ extern void RUN(vector<action>& rules, string main_row);
 void input_rules(vector<action>& rules, string main_row)
 {
     action element;
-    int i = 0, fl;
+    int i = 0;
     ifstream fle("rules.txt");
+    if (!fle) {
+        cout << "file not found!" << endl << "create rules.txt in root of rep!";
+        return;
+        exit(0);
+    }
     while (!fle.eof()) {
         rules.push_back(element);
         fle >> rules[i].state;
@@ -15,12 +20,10 @@ void input_rules(vector<action>& rules, string main_row)
         fle >> rules[i].next_state;
         i++;
     }
-    fl = check_error(rules);
-
-    if (fl)
+    if (check_error(rules))
         RUN(rules, main_row);
     else {
         cout << "!ERROR!";
-        return;
+        exit(0);
     }
 }

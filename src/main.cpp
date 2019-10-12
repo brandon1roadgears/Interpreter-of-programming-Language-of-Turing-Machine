@@ -4,6 +4,7 @@ extern string input_main_row(string main_row);
 extern void input_rules(vector<action>& rules, string main_row);
 int main()
 {
+    ios::sync_with_stdio(false);
     hello_user();
     string main_row;
     vector<action> rules;

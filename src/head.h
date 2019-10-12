@@ -1,5 +1,7 @@
 #pragma once
 #include <bits/stdc++.h>
+#include <chrono>
+#include <thread>
 using namespace std;
 struct action {
     string state;
